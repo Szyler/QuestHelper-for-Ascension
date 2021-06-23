@@ -94,31 +94,31 @@ local function registerAchievement(id)
   local critcount = GetAchievementNumCriteria(id)
   if critcount == 0 then record = true end
   
-  for i = 1, critcount do
-    local crit_name, crit_type, crit_complete, crit_quantity, crit_reqquantity, _, _, crit_asset, _, crit_id = GetAchievementCriteriaInfo(id, i)
+  -- for i = 1, critcount do
+  --   local crit_name, crit_type, crit_complete, crit_quantity, crit_reqquantity, _, _, crit_asset, _, crit_id = GetAchievementCriteriaInfo(id, i)
     
-    if qhdinfo and not achievement_type_blacklist[crit_type] then
-      if not qhdinfodump[crit_type] then qhdinfodump[crit_type] = {} end
-      qhdinfodump[crit_type][title .. " --- " .. crit_name] = true
-    end
+  --   if qhdinfo and not achievement_type_blacklist[crit_type] then
+  --     if not qhdinfodump[crit_type] then qhdinfodump[crit_type] = {} end
+  --     qhdinfodump[crit_type][title .. " --- " .. crit_name] = true
+  --   end
     
-    --[[
-    table.insert(dbi.criterialist, crit_id)
-    ass ert (not db.criteria[crit_id])
-    crittypes[crit_type] = (crittypes[crit_type] or 0) + 1]]
+  --   --[[
+  --   table.insert(dbi.criterialist, crit_id)
+  --   ass ert (not db.criteria[crit_id])
+  --   crittypes[crit_type] = (crittypes[crit_type] or 0) + 1]]
     
-    if not achievement_type_blacklist[crit_type] then record = true end
+  --   if not achievement_type_blacklist[crit_type] then record = true end
     
-    --[[
-    db.criteria[crit_id] = {
-      name = crit_name,
-      type = crit_type,
-      complete = crit_complete,
-      progress = crit_quantity,
-      progress_total = crit_reqquantity,
-      asset = crit_asset,
-    }]]
-  end
+  --   --[[
+  --   db.criteria[crit_id] = {
+  --     name = crit_name,
+  --     type = crit_type,
+  --     complete = crit_complete,
+  --     progress = crit_quantity,
+  --     progress_total = crit_reqquantity,
+  --     asset = crit_asset,
+  --   }]]
+  -- end
   
   if record then achievement_list[id] = true end
 end
