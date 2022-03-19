@@ -13,7 +13,29 @@ local classlookup = {
   ["ROGUE"] = "R",
   ["SHAMAN"] = "S",
   ["WARLOCK"] = "L",
-  ["WARRIOR"] = "W"
+  ["WARRIOR"] = "W",
+  ["BARBARIAN"] = "B",
+  ["WITCHDOCTOR"] = "WD",
+  ["DEMONHUNTER"] = "DH",
+  ["WITCHHUNTER"] = "WH",
+  ["STORMBRINGER"] = "SB",
+  ["FLESHWARDEN"] = "FW",
+  ["GUARDIAN"] = "G",
+  ["MONK"] = "MO",
+  ["SONOFARUGAL"] = "SOA",
+  ["RANGER"] = "RA",
+  ["CHRONOMANCER"] = "C",
+  ["NECROMANCER"] = "N",
+  ["PYROMANCER"] = "PY",
+  ["CULTIST"] = "CU",
+  ["STARCALLER"] = "SC",
+  ["SUNCLERIC"] = "SUC",
+  ["TINKER"] = "TI",
+  ["PROPHET"] = "PR",
+  ["REAPER"] = "RE",
+  ["WILDWALKER"] = "WIL",
+  ["SPIRITMAGE"] = "SPI"
+
 };
 
 local racelookup = {
