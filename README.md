@@ -1,3 +1,3 @@
-# Addon Name
+# Quest Helper
 
-This is the repository for <Addon Name>. Modified for Ascension.gg. 
+This is the repository for Quest Helper. Modified for Ascension.gg. 
