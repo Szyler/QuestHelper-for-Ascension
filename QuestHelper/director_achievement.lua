@@ -20,25 +20,12 @@ local function IsDoable(id)
       achieveable[id] = true
       return true
     end
-    
-    local crit = GetAchievementNumCriteria(id)
-    
-    -- Whenever I write "crit" as a variable name it always slightly worries me.
-    
-    -- Y'see, several years ago I competed in a programming competition called Topcoder. At the end of a big tournament, if you did well, they flew you to a casino or a hotel and you competed against a bunch of other geeks, with your code posted on monitors. This was uncommonly boring unless you were a geek, but luckily, we were, so it was actually kind of exciting.
-    -- So I'm up there competing, and I need a count, so I make a variable called "cont". "count", y'see, is a function, so I can't use that. But then I need another one. I can't go with "cout" because that's actually a global variable in C++, which is what I'm using. And, well, I want to keep the first and last letters preserved, because that way it reminds me it's a count.
-    
-    -- So I start typing the first thing that comes to mind that fulfills all the requirements.
-    
-    -- Luckily, I stop myself in time, and write "cnt" instead.
-    
-    -- Once or twice in QuestHelper I've needed a few variables about criteria. And there's . . . something . . . which is only one letter off from "crit", and is something I should probably not be typing in publicly accessible sourcecode.
-  
-    -- So now you know. Back to the code.
-    
-    -- (although let's be honest with the amount of profanity scattered throughout this codebase I'm not quite sure why I care buuuuuuuuuut here we are anyway)
-    
-    if crit > 0 then
+
+    if id then --Don't try if id is nil
+      local crit = GetAchievementNumCriteria(id)
+    end
+
+    if crit and crit > 0 then -- Avoid crit being nil
       for i = 1, crit do
         local _, typ, _, _, _, _, _, asset, _, cid = GetAchievementCriteriaInfo(id, i)
         if typ == 0 then
