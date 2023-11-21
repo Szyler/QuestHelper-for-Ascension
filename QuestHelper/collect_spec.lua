@@ -14,6 +14,9 @@ local classlookup = {
   ["SHAMAN"] = "S",
   ["WARLOCK"] = "L",
   ["WARRIOR"] = "W",
+
+  ["HERO"] = "H",
+
   ["BARBARIAN"] = "B",
   ["WITCHDOCTOR"] = "WD",
   ["DEMONHUNTER"] = "DH",
